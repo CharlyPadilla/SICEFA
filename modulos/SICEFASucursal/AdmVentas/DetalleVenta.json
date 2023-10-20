@@ -1,0 +1,23 @@
+[
+    {
+        "idDetalleVenta": "0001",
+        "cantidadProducto": 5,
+        "precioVigente": 350,
+        "idVenta": "0001",
+        "idProducto": "0001"
+    },
+    {
+        "idDetalleVenta": "0002",
+        "cantidadProducto": 4,
+        "precioVigente": 360,
+        "idVenta": "0001",
+        "idProducto": "0001"
+    },
+    {
+        "idDetalleVenta": "0003",
+        "cantidadProducto": 3,
+        "precioVigente": 350,
+        "idVenta": "0001",
+        "idProducto": "0001"
+    }
+]

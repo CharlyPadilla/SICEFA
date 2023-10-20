@@ -1,0 +1,154 @@
+<div>
+    <div class="container d-flex">
+        <div class="left-side" >
+            <div class="left-column">
+                <!-- Contenido de la primera columna izquierda -->
+                <div style="background-color: #CAF0F8" class="p-4 m-1 rounded-2 botones-fijos">
+                    <div class="row g-3">
+                        <div class="text-xl-center p-3">
+                            <h2>Gestión de Clientes</h2>
+                        </div>
+                        
+                        <!-- Campos de entrada para la información del cliente -->
+                        
+                        <div class="col-md-6">
+                            <h5><label for="txtNumUnico" class="mt-2 rounded-1">Número del Cliente</label></h5>
+                            <input id="txtNumUnico" type="text"  readonly class="mt-2">
+                        </div>
+                        <div class="col-md-6">
+                            <h5><label for="txtNombre" class="mt-2">Nombre(s):</label></h5>
+                            <input id="txtNombre" type="text"  class="mt-2">
+                        </div>
+                        <div class="col-md-6">
+                            <h5><label for="txtApePaterno" class="mt-2">Apellido Paterno:</label></h5>
+                            <input id="txtApePaterno" type="text"  class="mt-2">
+                        </div>
+                        <div class="col-md-6">
+                            <h5><label for="txtApeMaterno" class="mt-2">Apellido Materno:</label></h5>
+                            <input id="txtApeMaterno" type="text"  class="mt-2">
+                        </div>
+                        <div class="col-md-6">
+                            <h5><label class="mt-2">Género:</label></h5>
+                            <select class=" form-select-sm col-md-6 p-2" id="txtGenero" name="txtGenero">
+                                <option value="Masculino" >Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="fechaNacimiento" class="mt-2">Fecha de Nacimiento:</label></h5>
+                            <input type="date" id="fechaNacimiento" required class="mt-2"><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="txtRfc" class="mt-2 col-12">RFC:</label><br></h5>
+                            <input id="txtRfc" type="text"  class="mt-2">
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="CURP" class="mt-2 col-12">CURP:</label></h5>
+                            <input type="text" id="CURP" class="mt-2" required><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="foto" class="mt-2 ">Foto:</label></h5>
+                            <input type="file" id="foto" accept="image/*" class="mt-2"><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="domicilio" class="mt-2">Domicilio:</label></h5>
+                            <input type="text" id="domicilio" class="mt-2" required ><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="txtColonia" class="mt-2">Colonia:</label></h5>
+                            <input type="text" id="txtColonia" class="mt-2" required ><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="codigoPostal">Código Postal:</label></h5>
+                            <input type="text" id="codigoPostal" class="mt-2" required><br>  
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="ciudad">Ciudad:</label></h5>
+                            <input type="text" id="ciudad" class="mt-2 " required><br>  
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="estado">Estado:</label></h5>
+                            <input type="text" id="estado" class="mt-2 " required><br>  
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label for="txtTelefono" class="mt-2 ">Télefono:</label></h5>
+                            <input id="txtTelefono" type="text"  class="mt-2">
+                        </div>
+                        <div class="col-md-6">
+                            <h5><label for="txtCorreo" class="mt-2 ">Correo Electronico:</label></h5>
+                            <input id="txtCorreo" type="text"  class="mt-2">
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <h5><label for="fechaIngreso" class="mt-2">Fecha de Ingreso:</label></h5>
+                            <input type="date" id="fechaIngreso" required class="mt-2"><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><label class="mt-2">Estatus:</label></h5>
+                            <select class="col-md-6 form-select-sm p-2" id="txtEstatus" name="txtEstatus">
+                                <option value="Masculino" >Activo</option>
+                                <option value="Femenino">Inactivo</option>
+                            </select>
+                        </div>
+
+                        <!-- Botones para acciones -->
+                        
+                        <div class="botones-fijos text-xl-center" style="background-color: #CAF0F8">
+                            <button id="btnRegistrar" onclick="addCliente();">Registrar</button>
+                            <button id="btnEliminar" onclick="deleteCliente();">Eliminar</button>
+                            <button id="btnModificar" onclick="updateCliente();">Modificar</button>
+                            <button id="btnLimpiar" onclick="cleanClientes();">Limpiar</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Búsqueda y lista de clientes -->
+            
+            <div>
+                
+                <!-- Entrada de búsqueda -->
+                
+                <div class="botones-fijos p-1 m-1 rounded-2 text-xl-center" style="background-color: #CAF0F8">
+                    <label for="txtBusquedaCliente" class="form-label mx-3 h4 p-3 rounded-3">Buscar Cliente:</label>
+                    <input type="text" id="txtBusquedaCliente" oninput="filtrarClientes()">
+                </div>
+
+                <!-- Lista de clientes -->
+                
+                <div class="right-side d-flex p-4">
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Género</th>
+                                <th>Teléfono</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblClientes">
+                            <!-- Las filas de la lista de clientes se generarán aquí dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

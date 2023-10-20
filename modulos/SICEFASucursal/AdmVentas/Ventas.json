@@ -1,0 +1,26 @@
+[
+    {
+    "idVenta": "0001",
+    "estatus": 1,
+    "cliente": "0003",
+    "fecha": "2023-07-24",
+    "hora": "7:42:11",
+    "empleado": "0006"
+    },
+    {
+    "idVenta": "0004",
+    "estatus": 1,
+    "cliente": "0001",
+    "fecha": "2023-07-24",
+    "hora": "7:42:11",
+    "empleado": "0002"
+    },
+    {
+    "idVenta": "0003",
+    "estatus": 0,
+    "cliente": "0005",
+    "fecha": "2023-07-24",
+    "hora": "7:42:11",
+    "empleado": "0003"
+    }
+]

@@ -1,0 +1,126 @@
+<div>
+    <div class="container">
+        <div class="left-side">
+            <div class="left-column">
+                <!-- Contenido de la primera columna izquierda -->
+                <div style="background-color: #CAF0F8" class="text-xl-center p-4 m-1 rounded-2 botones-fijos">
+                    <div class="justify-content-center align-content-center row g-3">
+                        <div class="text-xl-center p-3">
+                            <h2>Gestión de Empleados</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtIdEmpleado" class="mt-2 rounded-1">Id empleado:</label></h5>
+                            <input id="txtIdEmpleado" type="text" readonly class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtNombre" class="mt-2">Nombre:</label></h5>
+                            <input id="txtNombre" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtApePaterno" class="mt-2">Apellido Paterno:</label></h5>
+                            <input id="txtApePaterno" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtApeMaterno" class="mt-2">Apellido Materno:</label></h5>
+                            <input id="txtApeMaterno" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label class="mt-2">Género:</label></h5>
+                            <select class="form-select form-select-sm col-md-6 p-2" id="txtGenero" name="txtGenero">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtRFC" class="mt-2 col-12">RFC:</label></h5>
+                            <input id="txtRFC" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtFechaNac" class="mt-2 col-12">Fecha de nacimiento:</label></h5>
+                            <input id="txtFechaNac" type="date" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtCURP" class="mt-2 col-12">CURP:</label></h5>
+                            <input id="txtCURP" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtFoto" class="mt-2">Fotografia:</label></h5>
+                            <input id="txtFoto" type="file" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtDomicilio" class="mt-2 col-12">Domicilio:</label><br></h5>
+                            <input id="txtDomicilio" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtCP" class="mt-2">C.P:</label></h5>
+                            <input id="txtCP" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtCiudad" class="mt-2">Ciudad:</label></h5>
+                            <input id="txtCiudad" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtEstado" class="mt-2">Estado:</label></h5>
+                            <input id="txtEstado" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtTelefono" class="mt-2">Telefono:</label></h5>
+                            <input id="txtTelefono" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtFechaIngreso" class="mt-2">Fecha de ingreso</label></h5>
+                            <input id="txtFechaIngreso" type="date" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtPuesto" class="mt-2">Puesto</label></h5>
+                            <input id="txtPuesto" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtSalario" class="mt-2">Salario bruto mensual</label></h5>
+                            $<input id="txtSalario" type="text" class="mt-2">
+                        </div>
+                        <div class="col-lg-6">
+                            <h5><label for="txtCorreo" class="mt-2">Email</label></h5>
+                            <input id="txtCorreo" type="text" class="mt-2">
+                        </div>
+
+                        <div class="botones-fijos text-xl-center" style="background-color: #CAF0F8">
+                            <button id="btnAdd" onclick="addEmpleado();">Registrar</button>
+                            <button id="btnDelete" onclick="deleteEmpleado();">Eliminar</button>
+                            <button id="btnUpdate" onclick="updateEmpleado();">Modificar</button>
+                            <button id="btnLimpiar" onclick="cleanEmpleados();">Limpiar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <div class="botones-fijos p-1 m-1 rounded-2 text-xl-center" style="background-color: #CAF0F8">
+                    <label for="txtBusquedaEmpleado" class="form-label mx-3 h4 p-3 rounded-3">Buscar empleado</label>
+                    <input type="text" id="txtBusquedaEmpleado" oninput="filtrarEmpleados()">
+                    <button class="btn mx-2" style="color: white;" onclick="cargarTablaEmpleados();">Buscar</button>
+                </div>
+
+                <div class="right-side d-flex p-4">
+
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Id empleado</th>
+                                <th>Nombre</th>
+                                <th>Género</th>
+                                <th>Teléfono</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblEmpleados">
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
